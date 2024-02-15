@@ -28,10 +28,19 @@
                     <a href="/" class="navbar_links"> History </a>
                 </li>
                 <li class="navbar_btm">
-                    <a href="/" class="button">Sign up </a>
+                    <li class="button">
+                        <button onclick="redirectToSignUp()">Sign up</button>
+
+                    <script>
+                        function redirectToSignUp() {
+                            window.location.href = 'sign_up.html';
+                        }
+                    </script>
+
+                    </li>
+                    
                 </li>
-                
-                
+ 
             </ul>
         </div>
     </nav>
