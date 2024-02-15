@@ -167,9 +167,10 @@
     .navbar_btn {
         padding-bottom: 1rem;
     }
-
+    
     .button {
         display: flex;
+        font-size: 24px;
         justify-content: center;
         align-items: center;
         width: 100%;
