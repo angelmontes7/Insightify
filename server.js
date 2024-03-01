@@ -1,3 +1,6 @@
+// to start server run "npm run devStart" in terminal without quotes
+// open a web browser and type localhost:3000 and that will open server
+
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
@@ -33,13 +36,14 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
+app.use(express.static('views'))
 
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name})
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
-    res.render('login.ejs')
+    res.render('login.ejs', {message: req.flash('error')})
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
