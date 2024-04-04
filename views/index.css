@@ -24,9 +24,13 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
 }
 
 #navbar_logo {
@@ -42,13 +46,19 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    margin-left: -20px;
 }
 
+#logo_img {
+    width: 100px;
+    margin-left: -65px;
+}
 .navbar_menu {
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
+    margin-right: -35px;
 }
 
 .navbar_item {
@@ -107,7 +117,16 @@
         z-index: 1;
         width: 100%;
         max-width: 1300px;
-        padding: 0;
+        padding: 0px;
+    }
+    
+    #navbar_logo {
+        padding-left: 0px;
+    }
+
+    #logo_img {
+        width: 100px; 
+        margin-left: -15px; 
     }
     
     .navbar_menu {
@@ -132,10 +151,6 @@
         z-index: 99;
         height: 50vh;
         font-size: 1.6rem;
-    }
-
-    #navbar_logo {
-        padding-left: 25px;
     }
 
     .navbar_toggle .bar {
@@ -287,7 +302,7 @@
     width: 100%;
 }
 
-.main_img-container {
+.main_img--container {
     text-align: center;
 }
 

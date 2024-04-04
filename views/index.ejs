@@ -11,7 +11,10 @@
     <!--- Navbar Section-->
     <nav class="navbar">
         <div class="navbar_container">
-            <a href="/" id="navbar_logo">Insightify</a>
+            <div class="logo_container">
+                <img src="images/logo.png" alt="pic" id="logo_img">
+                <div id="navbar_logo">Insightify</div>
+            </div>
             <div class="navbar_toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -110,4 +113,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+</form>
 

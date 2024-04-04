@@ -21,6 +21,7 @@
 .navbar_container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
     z-index: 1;
     width: 100%;
@@ -28,6 +29,20 @@
     margin: 0 auto;
     padding: 0 50px;
 }
+
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+#main_img {
+    width: 100px; 
+    margin-left: -150px; 
+}
+
+
+
 
 #navbar_logo {
     background: #ff0844;
@@ -43,16 +58,33 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    margin-left: -20px;
 }
 
-#navbar_button {
-    font-size: 2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    
+
+
+
+@media screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0px;
+        
+    }
+    #navbar_logo {
+        padding-left: 0px;
+    }
+
+    #main_img {
+        width: 100px;
+        margin-left: -15px; 
+    }
+
+
+
 }
+
