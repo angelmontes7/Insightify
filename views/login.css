@@ -1,3 +1,19 @@
+/* Error Header */
+.error-header {
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Add padding */
+    position: fixed; /* Fixed position */
+    top: 50px; /* Adjust the top position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 500px; /* Full width */
+    z-index: 1000; /* Set z-index */
+    border-radius: 25px;
+    height: 50px;
+}
+
 body{
     margin: 0;
     padding: 0;
