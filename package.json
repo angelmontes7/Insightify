@@ -4,7 +4,14 @@
   "description": "This repository will hold a AI Summary extension project. The goal of this project is to create a website that will display the extension with intriguing  visuals that will capture the essence of this project. It will have a signup feature as well as social media accounts to promote this project. The extension  will be displayed once the user has created a account and signed up for this free service. Once the extension is downloaded it clicked on the user will have  the ability to highlight a piece of text and AI will create a summary od the text that was highlighted.",
   "main": "script.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+
+
+    
+    "clean": "rm extension/content.js extension/content.js.map",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +27,14 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+
+    
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
   }
 }
