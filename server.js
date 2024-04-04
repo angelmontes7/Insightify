@@ -38,6 +38,10 @@ app.use(passport.session())
 app.use(methodOverride('_method'))
 app.use(express.static('views'))
 
+app.get('/', (req, res) => {
+    res.render('index.ejs');
+});
+
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name})
 })
@@ -47,7 +51,7 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/main.html',
     failureRedirect: '/login',
     failureFlash: true
 }))
@@ -79,7 +83,7 @@ app.delete('/logout', (req, res) => {
             console.error(err)
             return res.status(500).send("Error during logout")
         }
-    res.redirect('/login')
+    res.redirect('/')
     })
 })
 
