@@ -46,12 +46,17 @@ app.get('/', checkAuthenticated, (req, res) => {
     res.render('index.ejs', { name: req.user.name})
 })
 
+app.get('/main', checkAuthenticated, (req, res) => {
+    res.render('main.ejs', { name: req.user.name });
+});
+
+
 app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs', {message: req.flash('error')})
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/main.html',
+    successRedirect: '/main',
     failureRedirect: '/login',
     failureFlash: true
 }))
@@ -97,7 +102,7 @@ function checkAuthenticated(req, res, next) {
 
 function checkNotAuthenticated(req, res, next) {
     if (req.isAuthenticated()){
-        return res.redirect('/')
+        return res.redirect('/main')
     }
     next()
 }

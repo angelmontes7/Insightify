@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insightify</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/ef4db14556.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--- Navbar Section-->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <div class="logo_container">
+                <img src="images/logo.png" alt="pic" id="main_img">
+                <div id="navbar_logo">Insightify</div>
+                <div id="user_name"> Welcome <%= name %></div>
+            </div>
+            <div class="button_container">
+                <form action="/logout?_method=DELETE" method="POST">
+                    <button class="button" type="submit">Log Out</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Side Bar -->
+    <div class="sidebar">
+        <h3>History</h3>
+    </div>
+
+    <!-- Main Page -->
+    
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="col-1">
+            <h3>USEFUL LINKS</h3>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Shop</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="col-2">
+            <h3>NEWSLETTER</h3>
+            <form>
+                <input type="email" placeholder="Your Email Address" required>
+                <br>
+                <button type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+        <div class="col-3">
+            <h3>CONTACT</h3>
+            <p>30 N Brainard St, <br>Naperville, IL 60540</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61558126498694"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="https://twitter.com/Insightify72318"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/xinsightify/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://discord.com/channels/@insightify"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
+                 
+    
+</body>
+</html>
+

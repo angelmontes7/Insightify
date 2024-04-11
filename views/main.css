@@ -5,6 +5,7 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+
 .navbar {
     background: #131313;
     height: 80px;
@@ -12,9 +13,11 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 999;
+    width: 100%;
+    
 
 }
 
@@ -25,7 +28,6 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -37,8 +39,8 @@
 }
 
 #main_img {
-    width: 100px; 
-    margin-left: -150px; 
+    width: 100px;
+    margin-left: -65px; 
 }
 
 .button {
@@ -81,6 +83,25 @@
 }
 
 
+#user_name {
+    background: #ff0844;
+    background-color: #ff9177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 @media screen and (max-width: 960px) {
@@ -113,7 +134,195 @@
         margin: 0;
         
     }
-
-
+    
+    
 }
 
+.sidebar {
+    background: black;
+    background-color: black;
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: #ff0844;
+    -moz-text-fill-color: #ff9177;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    position: fixed;
+  
+    top: 100px; /* Adjust this value based on the height of your navbar */
+    bottom: 370px;
+    width: 100px; /* Adjust the width of the sidebar */
+    z-index: 998; /* Ensure the sidebar is behind the navbar */
+}
+
+@media screen and (max-width: 960px) {
+    .sidebar {
+        width: 100px; /* Adjust the width of the sidebar for smaller screens */
+        height: 415px;
+        z-index: 998;
+    }
+}
+
+
+
+
+
+
+/* Footer Section CSS */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 80px;
+    background-image: linear-gradient(to right, 
+        #ff8177 0%,
+        #ff867a 0%, 
+        #ff8c7f 21%, 
+        #f99185 52%, 
+        #cf556c 78%,
+        #b12a5b 100%);
+    color: #efefef;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.footer div {
+    text-align: center;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+.col-2 button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.col-3 p {
+    color: #efefef;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        background-image: linear-gradient(to right, 
+            #ff8177 0%,
+            #ff867a 0%, 
+            #ff8c7f 21%, 
+            #f99185 52%, 
+            #cf556c 78%,
+            #b12a5b 100%);
+        color: #efefef;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer div {
+        text-align: center;
+    }
+    
+    .col-2 {
+        flex-grow: 2;
+    }
+    
+    .footer div h3 {
+        font-weight: 300;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .col-1 a {
+        margin-right: 10px;
+        display: block;
+        text-decoration: none;
+        color: #efefef;
+        margin-bottom: 10px;
+    }
+    
+    form input {
+        width: 100%;
+        max-width: 400px;
+        height: 45px;
+        border-radius: 4px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        outline: none;
+        border: none;
+    }
+    
+    .col-2 button {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 30px;
+        padding: 10px 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .col-3 p {
+        margin-left: 10px;
+        color: #efefef;
+    }
+    
+    .social-icons {
+        margin-top: 20px;
+    }
+    
+    .social-icons i {
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
