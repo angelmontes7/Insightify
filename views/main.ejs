@@ -12,25 +12,91 @@
     <nav class="navbar">
         <div class="navbar_container">
             <div class="logo_container">
-                <img src="images/logo.png" alt="pic" id="main_img">
+                <img src="images/logo.png" alt="pic" id="logo_img">
                 <div id="navbar_logo">Insightify</div>
                 <div id="user_name"> Welcome <%= name %></div>
             </div>
-            <div class="button_container">
-                <form action="/logout?_method=DELETE" method="POST">
-                    <button class="button" type="submit">Log Out</button>
-                </form>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links"> Home </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links"> Products </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links"> History </a>
+                </li>
+                <li class="navbar_btm">
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button class="button" type="submit">Log Out</button>
+                    </form>
+                </li>
+            </ul>
         </div>
     </nav>
-    
-    <!-- Side Bar -->
-    <div class="sidebar">
-        <h3>History</h3>
+
+    <!-- Hero Section -->
+    <div class="main">
+        <div class="main_container">
+            <div class="main_content">
+                <h1> EXPLORE LIMITLESS</h1>
+                <h2> EXTENSIONS </h2>
+                <p> Maximize your productivity. </p>
+                <button class="main_btn"><a href="/"> Get Started </a></button>
+            </div> 
+            <div class="main_img--container">
+                <video autoplay muted loop src="videos/MainVideo.mp4" id="main_img"></video>
+            </div>
+        </div>
     </div>
 
-    <!-- Main Page -->
-    
+    <!-- Service Section -->
+    <div class="services">
+        <h1>Google Chrome Extensions Down Below</h1>
+        <div class="service_container">
+            <!-- Left Banner -->
+            <div class="banner_left">
+                <p>Left Banner Text Here</p>
+            </div>
+            <div class="service_card">
+                <h2>Email Scraper</h2>
+                <p>Having trouble finding a email?</p>
+                <p>Activate this extension and let AI do the work for you!</p>
+                <button>Get Started</button>
+            </div>
+            <div class="service_img--container">
+                <video autoplay muted loop src="videos/EmailScraperVideo.mp4" width="500" id="service_img"></video>
+            </div>
+            <!-- Right Banner -->
+            <div class="banner_right">
+                <p>Right Banner Text Here</p>
+            </div>
+
+            <!-- Second Set of banners and videos -->
+            <div class="banner_left banner_lower">
+                <p>Lower Left Banner Text Here</p>
+            </div>
+            <div class="service_card">
+                <h2>AD Blocker</h2>
+                <p>Tired of the annoying ads?</p>
+                <p>Let AI handle those for you!</p>
+                <button>Get Started</button>
+            </div>
+            <div class="service_img--container">
+                <video autoplay muted loop src="videos/AdBlockerVideo.mp4" width="500" id="service_img"></video>
+            </div>
+            <div class="banner_right banner_lower">
+                <p>Lower Right Banner Text Here</p>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer Section -->
     <div class="footer">
         <div class="col-1">
@@ -60,8 +126,8 @@
             </div>
         </div>
     </div>
-                 
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
 
