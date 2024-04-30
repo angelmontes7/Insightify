@@ -508,10 +508,20 @@ body {
     height: 525px; /* Adjust height as needed */
     background-color: #f77062; /* Adjust color as needed */
     border-radius: 4px;
-    top: 120%;
-    background-image: url(images/banner1.png);
+    top: 125%;
     background-size: cover;
+    background-image: url('images/banner1.png');
     background-position: center;
+    animation: bannerAnimation 8s infinite alternate;
+}
+
+@keyframes bannerAnimation {
+    100% {
+        background-image: url('images/banner1.png'); /* Initial background image */
+    }
+    50% {
+        background-image: url('images/banner2.png'); /* Intermediate background image */
+    }
 }
 
 .banner_left,
